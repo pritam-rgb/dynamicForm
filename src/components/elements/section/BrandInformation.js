@@ -2,15 +2,19 @@ import React from 'react';
 import Input from '../Input';
 import Select from '../Select';
 
-const BrandInformation = ({_id,type,fieldName,fieldLabel,sectionName,option}) => {
+const BrandInformation = ({_id,type,fieldName,fieldLabel,sectionName,option,order}) => {
     <h1>{sectionName}</h1>
     switch (type) {
         case "singleLine":
-            return(<Input 
+            return(<div>
+                <div>
+                    {order==1?<h1>{sectionName}</h1>:""}
+                </div>
+                <Input 
                 fieldName={fieldName}
                 fieldLabel={fieldLabel}
                 _id={_id}
-            />)
+        /></div>)
             
         case "dropDown":
             return(<Select 

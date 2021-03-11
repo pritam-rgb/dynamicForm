@@ -2,15 +2,12 @@ import React from 'react'
 
 const Input = ({_id,type,fieldName,fieldLabel,sectionName,required}) => {
     return (
-        <div className="Input-Container">
-            
-            <div style={{display:"flex",justifyContent:"space-between"}}>
-                
-                <label htmlFor=""
-                className="form-label">{fieldLabel}</label> 
-                <input  className="form-control" placeholder={fieldLabel} required={required} />
-            </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">{fieldLabel}</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder={fieldLabel} required={required} />
         </div>
+        
+        
     )
 }
 

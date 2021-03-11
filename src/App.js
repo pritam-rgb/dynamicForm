@@ -14,7 +14,7 @@ function App() {
   
   return (
     <div className="App container">
-      <h3>{description}</h3>
+      <h3 style={{textAlign:'center'}}>{description}</h3>
       
       
       <form>

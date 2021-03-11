@@ -7,7 +7,7 @@ import EntityInformation from './elements/section/EntityInformation';
 import AdditionalInformation from './elements/section/AdditionalInformation';
 
 
-const Element = ({fieldData: {_id,type,fieldName,fieldLabel,sectionName,option,required}}) => {
+const Element = ({fieldData: {_id,type,fieldName,fieldLabel,sectionName,option,order,required}}) => {
 
     console.log(sectionName);
     switch (sectionName) {
@@ -17,7 +17,9 @@ const Element = ({fieldData: {_id,type,fieldName,fieldLabel,sectionName,option,r
                 fieldName={fieldName}
                 fieldLabel={fieldLabel}
                 option={option}
+                sectionName={sectionName}
                 required={required}
+                order={order}
             />)
         case "User Information":
             return (<UserInformation 
@@ -25,6 +27,8 @@ const Element = ({fieldData: {_id,type,fieldName,fieldLabel,sectionName,option,r
                 fieldName={fieldName}
                 fieldLabel={fieldLabel}
                 option={option}
+                order={order}
+                sectionName={sectionName}
                 required={required}
                 />)
         case "Address Information":
@@ -33,6 +37,8 @@ const Element = ({fieldData: {_id,type,fieldName,fieldLabel,sectionName,option,r
                 fieldName={fieldName}
                 fieldLabel={fieldLabel}
                 option={option}
+                order={order}
+                sectionName={sectionName}
                 required={required}
                 />)
         case "Entity Information":
@@ -41,6 +47,8 @@ const Element = ({fieldData: {_id,type,fieldName,fieldLabel,sectionName,option,r
                 fieldName={fieldName}
                 fieldLabel={fieldLabel}
                 option={option}
+                order={order}
+                sectionName={sectionName}
                 required={required}
                 />)
         case "Additional Information":
@@ -49,6 +57,8 @@ const Element = ({fieldData: {_id,type,fieldName,fieldLabel,sectionName,option,r
                     fieldName={fieldName}
                     fieldLabel={fieldLabel}
                     option={option}
+                    order={order}
+                    sectionName={sectionName}
                     required={required}
                     />)
     
